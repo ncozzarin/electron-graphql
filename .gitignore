@@ -1,2 +1,14 @@
 
-node_modules/7zip-bin/7x.sh
+node_modules
+*.json
+*-local.*
+bin/
+dist/
+lib/
+
+# editors
+*.swp
+.idea/
+.vs/
+.vscode/
+.DS_Store
