@@ -164,6 +164,7 @@ export default function MiniDrawer() {
 				<Divider />
 				<List>
 					{[ 'All mail', 'Trash', 'Spam' ].map((text, index) => (
+					<Link to="/data">
 						<ListItemButton
 							key={text}
 							sx={{
@@ -183,6 +184,7 @@ export default function MiniDrawer() {
 							</ListItemIcon>
 							<ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
 						</ListItemButton>
+					</Link>
 					))}
 				</List>
 			</Drawer>

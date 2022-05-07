@@ -4,6 +4,7 @@ import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import Participants from './components/Participants/Participants';
 import MenuComp from './components/MenuComp';
 import './App.scss';
+import Datagrid from './components/Datagrid/Datagrid';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
             <Route path="/participants" element={<Participants />} />
             <Route path="/fiveK" element={<h2>5K</h2>} />
             <Route path="/tenK" element={<h2>10K</h2>} />
+            <Route path="/data" element={<Datagrid />} />
           </Routes>
         </Container>
       </Router>
