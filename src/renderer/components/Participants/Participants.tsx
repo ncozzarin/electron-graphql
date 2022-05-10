@@ -1,7 +1,8 @@
-/* eslint-disable prettier/prettier */
+/* eslint-disable promise/always-return */ /* eslint-disable func-names */ /* eslint-disable promise/catch-or-return */ /* eslint-disable prettier/prettier */
 import React, { useEffect } from 'react';
 import { gql, useQuery } from '@apollo/client';
 import './styles.scss';
+import axios from 'axios';
 
 type Character = {
   name: string;
@@ -23,14 +24,22 @@ export default function Participants() {
   const { loading, error, data } = useQuery(PEOPLE);
   const fetchLocal = () => {
 
-    fetch('http://127.0.0.1:8081',  {
-      method: 'GET',
-      redirect: 'follow',
-      mode: 'no-cors',
+  axios({
+    method: 'get',
+    url: 'http://127.0.0.1:8081',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Requested-With': 'XMLHttpRequest',
+      'Access-Control-Allow-Origin': '*',
+    }
+  })
+    .then(function (response) {
+      console.log({response})
     })
-      .then((response) => console.log(response))
-      .then((result) => console.log(result))
-      .catch((err) => console.log(err));
+    .catch(function (err) {
+      console.log({err});
+    });
+
   };
 
   useEffect(() => {
