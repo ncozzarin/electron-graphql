@@ -1,13 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { gql, useQuery } from '@apollo/client';
 import './gridstyles.scss';
-import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
-
-const rows: GridRowsProp = [
-  { id: 1, col1: 'Hello', col2: 'World' },
-  { id: 2, col1: 'DataGridPro', col2: 'is Awesome' },
-  { id: 3, col1: 'MUI', col2: 'is Amazing' },
-];
+import { DataGrid} from '@mui/x-data-grid';
 
 const columns = [
     { field: 'name', headerName: 'name' },
@@ -46,9 +40,9 @@ export default function Datagrid() {
 
 	return (
 		<div className='datagrid-container'>
-            <DataGrid 
-                rows={data.characters.results} 
-                columns={columns} 
+            <DataGrid
+                rows={data.characters.results}
+                columns={columns}
                 checkboxSelection
             />
 		</div>
