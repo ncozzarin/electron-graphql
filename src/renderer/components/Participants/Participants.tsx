@@ -28,7 +28,7 @@ export default function Participants() {
       redirect: 'follow',
       mode: 'no-cors',
     })
-      .then((response) => response.text())
+      .then((response) => console.log(response))
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
   };

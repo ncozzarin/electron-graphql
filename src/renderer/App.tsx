@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import Container from '@mui/material/Container';
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles';
 import Participants from './components/Participants/Participants';
 import MenuComp from './components/MenuComp';
 import './App.scss';
@@ -21,6 +22,6 @@ export default function App() {
           </Routes>
         </Container>
       </Router>
-    </>
+   </>
   );
 }
