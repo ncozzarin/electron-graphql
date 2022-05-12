@@ -1,9 +1,10 @@
 /* eslint-disable prettier/prettier */
+const cors = require("cors");
 const express = require('express');
 
   const port = 8081;
   const app = express();
-
+app.use(cors());
 app.get('/', (req, res) => res.json({ key: 'value' }));
 const allowCrossDomain = function(req, res, next) {
   res.header('Access-Control-Allow-Origin', "*");
