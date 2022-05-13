@@ -170,7 +170,7 @@ const ResponsiveAppBar = () => {
                 <MenuItem
                   key={setting.name}
                   onClick={() => {
-                    console.log(setting.route);
+                    // console.log(setting.route);
 
                     navigate(setting.route);
                     return handleCloseNavMenu;

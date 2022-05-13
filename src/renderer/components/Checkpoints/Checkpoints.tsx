@@ -44,7 +44,7 @@ const Checkpoints = () => {
             <h1>/ welcome from welcome comp</h1>
             <Line
               data={data}
-              // options={...}
+              options={config.options}
               // {...props}
             />
             </Box>
